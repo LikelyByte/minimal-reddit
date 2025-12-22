@@ -1,14 +1,21 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import MainLayout from "../components/layout/MainLayout";
+import Home from "../pages/Home/Home";
+import Popular from "../pages/Popular/Popular";
+import Explore from "../pages/Explore/Explore";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<AppLayout />}>
-        
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Navigate to="/home" replace />} />
+        <Route path="home" element={<Home />} />
+        <Route path="popular" element={<Popular />} />
+        <Route path="explore" element={<Explore />} />
       </Route>
     </Routes>
-  )
-}
+  );
+};
 
-export default App
+export default App;
