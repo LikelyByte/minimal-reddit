@@ -4,6 +4,7 @@ import MainLayout from "../components/layout/MainLayout";
 import Home from "../pages/Home/Home";
 import Popular from "../pages/Popular/Popular";
 import Explore from "../pages/Explore/Explore";
+import "./App.css"
 
 const App = () => {
   return (
